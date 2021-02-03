@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Kubernetes | Rohan Badwe</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+  
+
+  <link rel="shortcut icon" type="image/png" href="./favicon.ico" />
+
+
+  
+  
+    
+ 
+  
+  
+  
+  
+  
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/post.min.b60e0932fe1c50c3d7c5b4f83ee9e4592363654d0f2abf05bbd0678d5b8a214c.css" integrity="sha256-tg4JMv4cUMPXxbT4PunkWSNjZU0PKr8Fu9BnjVuKIUw="/>
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU="/>
+  
+  
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.rbadwe.github.io"
+      },
+      "articleSection" : "blog",
+      "name" : "Kubernetes",
+      "headline" : "Kubernetes",
+      "description" : "",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2021",
+      "datePublished": "2021-02-03 20:23:51 \u002b0530 IST",
+      "dateModified" : "2021-02-03 20:23:51 \u002b0530 IST",
+      "url" : "https:\/\/www.rbadwe.github.io\/blog\/kubernetes\/",
+      "wordCount" : "516",
+      "keywords" : ["Blog"]
+    }
+  
+  </script>
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" id="navigation">
+  <ul class="nav__list">
+    
+    
+      <li>
+        <a  href="/">about</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+         href="/blog">blog</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+    
+
+    <div class="flex-wrapper">
+      <div class="post__container">
+        <div class="post">
+          <header class="post__header">
+            <h1 id="post__title">Kubernetes</h1>
+            <time datetime="2021-02-03 20:23:51 &#43;0530 IST" class="post__date">Feb 3 2021</time> 
+          </header>
+          <article class="post__content">
+              
+<h3 id="q-what-is-kubernetes">Q. What is Kubernetes?<a class="anchor" href="#q-what-is-kubernetes">#</a></h3>
+<pre><code>Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes services, support, and tools are widely available. Kubernetes automates the deployment, scaling, maintenance, scheduling, and operation of multiple application containers across clusters of nodes. Kubernetes contains tools for orchestration, service discovery, and load balancing that can be used with Docker and Rocket containers. As needs change, a developer can move container workloads in Kubernetes to another cloud provider without changing the code.
+</code></pre>
+<h2 id="kubernetes-terminology-and-architecture">Kubernetes Terminology and Architecture<a class="anchor" href="#kubernetes-terminology-and-architecture">#</a></h2>
+<p>Kubernetes introduces a lot of vocabulary to describe how your application is organized. We’ll start from the smallest layer and work our way up</p>
+<h1 id="i-containers">i. Containers</h1>
+<p>Containers are software images that represent complete runnable applications .
+It differs from a VM as in a VM is an abstraction at the hardware level whereas a container is an abstraction at the app level.A docker container (commonly used ) is a lightweight , standalone executable package of software which includes everything.</p>
+<ol>
+<li>Code</li>
+<li>Runtime</li>
+<li>System tools</li>
+<li>System libraries</li>
+<li>Settings</li>
+<li>Kubernetes comes into play to orchestrate multiple containers similar to management of a distributed system</li>
+</ol>
+<h2 id="ii-pods">ii. Pods<a class="anchor" href="#ii-pods">#</a></h2>
+<p>A Kubernetes pod is a group of containers, and is the smallest unit that Kubernetes administers. Pods have a single IP address that is applied to every container within the pod. Containers in a pod share the same resources such as memory and storage. This allows the individual Linux containers inside a pod to be treated collectively as a single application, as if all the containerized processes were running together on the same host in more traditional workloads</p>
+<h2 id="iii-deployments">iii. Deployments<a class="anchor" href="#iii-deployments">#</a></h2>
+<p>Kubernetes deployments define the scale at which you want to run your application by letting you set the details of how you would like pods replicated on your Kubernetes nodes.</p>
+<h2 id="iv-services">iv. Services<a class="anchor" href="#iv-services">#</a></h2>
+<p>A service is an abstraction over the pods, and essentially, the only interface the various application consumers interact with. As pods are replaced, their internal names and IPs might change. A service exposes a single machine name or IP address mapped to pods whose underlying names and numbers are unreliable. A service ensures that, to the outside network, everything appears to be unchanged</p>
+<h2 id="vnodes">v.Nodes<a class="anchor" href="#vnodes">#</a></h2>
+<p>A Kubernetes node manages and runs pods; it’s the machine (whether virtualized or physical) that performs the given work.
+The Kubernetes control plane
+The Kubernetes control plane is the main entry point for administrators and users to manage the various nodes.
+The control plane includes
+API server
+Scheduler
+Controller manager
+Worker Node components
+Kubelet- A Kubelet tracks the state of a pod to ensure that all the containers are running. It provides a heartbeat message every few seconds to the control plane.
+Kube proxy - The Kube proxy routes traffic coming into a node from the service. It forwards requests for work to the correct containers.
+Etcd - It is a distributed key-value store that Kubernetes uses to share information about the overall state of a cluster.
+Kubernetes architecture
+A bit more detailed architecture using the above mentioned terminologies</p>
+
+
+              
+          </article>
+          
+
+ <div class="pagination">
+  
+
+  
+    <a class="pagination__item" href="https://www.rbadwe.github.io/blog/hiding-another-image-inside-an-image/">
+      <span class="pagination__label">Next Post</span>
+      <span class="pagination__title" >Imagesteganography</span>
+    </a>
+  
+</div>
+
+          
+          <footer class="post__footer">
+            
+
+
+<div class="social-icons">
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="GitHub"
+         href="https://github.com/rbadwe"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('./svg/github.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="Email"
+         href="mailto:rohanb@tuta.io"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('./svg/email.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="Instagram"
+         href="https://instagram.com/r_badwe"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('./svg/instagram.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="LinkedIn"
+         href="www.linkedin.com/in/rohan-badwe"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('./svg/linkedin.svg')"></div>
+      </a>
+    
+     
+</div>
+
+
+            <p>© {2021}</p>
+          </footer>
+          </div>
+      </div>
+      
+    </div>
+    
+
+  </main>
+
+   
+
+  
+  <script src="/js/index.min.49e4d8a384357d9b445b87371863419937ede9fa77737522ffb633073aebfa44.js" integrity="sha256-SeTYo4Q1fZtEW4c3GGNBmTft6fp3c3Ui/7YzBzrr&#43;kQ=" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+
+  
+
+
+</body>
+
+</html>
