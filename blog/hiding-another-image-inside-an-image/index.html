@@ -61,7 +61,7 @@
       "datePublished": "2021-02-03 20:24:44 \u002b0530 \u002b0530",
       "dateModified" : "2021-02-03 20:24:44 \u002b0530 \u002b0530",
       "url" : "https:\/\/rbadwe.github.io\/blog\/hiding-another-image-inside-an-image\/",
-      "wordCount" : "901",
+      "wordCount" : "314",
       "keywords" : ["image processing ", "cryptography\u0022", "privacy", "Blog"]
     }
   
@@ -130,80 +130,6 @@ In October 2001, the New York Times published an article claiming that al-Qaeda 
 In cryptography, the system is broken when the attacker can read the secret message.
 Breaking a steganography system need the attacker to detect that steganography has been used.</p>
 <p><img src="/blog/images/city.png" alt="cityscapes"></p>
-<h2 id="as-an-image">as an image<a class="anchor" href="#as-an-image">#</a></h2>
-<p><img src="/blog/images/eq.png" alt="eq"></p>
-<h2 id="as-an-equation-in-latexkatex">as an equation in latex/katex<a class="anchor" href="#as-an-equation-in-latexkatex">#</a></h2>
-<p>$\frac{9283}{7411}$</p>
-<p>$\frac{a}{n}$ = a</p>
-<p>\documentclass[12pt,a4paper]{article}
-\usepackage[latin2]{inputenc}
-\usepackage{graphicx}
-\usepackage{ulem}
-\usepackage{amsmath}
-\begin{document}
-\begin{itemize}
-\item \textbf{Error Probability of Algorithm }
-\end{itemize}</p>
-<p>Prime vs Composite</p>
-<p>\textbf{Theorem}: Error Probability of Solovay Strassen Algorithm is
-$\le \frac{1}{2}$ .</p>
-<p>\textbf{Proof:}</p>
-<p>\ \ \ \ We need to show that for any odd composite n, n is Euler
-Pseudo-prime to the base a for at most half of the integers a ? Z$_{n
-}$$^{*}$</p>
-<p>Let G(n) = {a: a $?Z_{n}$$^{*}$, $(\frac{a}{n}) \equiv
-a^{(n-1)/2 }$ (mod n)}</p>
-<p>First, we shall show that G(n) is subgroup of $Z_{n}$$^{*}$.</p>
-<p>Then by simply using Lagrange&rsquo;s theorem, if G(n) ? $Z_{n}$$^{*}$,
-we can prove that,\ \ \ \ \ \ \ \ \ \ \ \</p>
-<p>$|G(n)|\le \frac{|Z_{n}|}{2}\le \frac{n-1}{2}$\</p>
-<p>\ \ \ \ \underline{Claim}: G(n) is a subgroup of $Z_{n}$$^{*}$</p>
-<p>\ \ \ \ Proof:</p>
-<p>\ \ \ \ \ \ \ \ Suppose that a, b $?G(n).$</p>
-<p>\ \ \ \ \ \ \ \ $ (\frac{a}{n}) \equiv a^{(n-1)/2 } (mod n)} $</p>
-<p>\ \ \ \ \ \ \ \ $ (\frac{b}{n}) \equiv b^{(n-1)/2 } (mod n)} $</p>
-<p>\ \ \ \ It follows from the multiplicative property of Jacobi symbols,</p>
-<p>\ \ \ \ \ \ \ \ $(\frac{ab}{n})\equiv (\frac{a}{n})(\frac{b}{n}) \equiv
-a^{(n-1)/2 }b^{(n-1)/2 }$ (mod n).</p>
-<p>\ \ \ \ $ab ?G(n).$</p>
-<p>\ \ \ \ Hence, Closure holds for G(n).</p>
-<p>\ \ \ \ We know that since, G(n) is a subset of multiplicative finite
-group and is also closed under the operation of multiplication.</p>
-<p>\ \ \ \ $$ G(n) is subgroup of $Z_{n}$$^{*}$</p>
-<p>\ \ \ \ Now, we need to show that there exist at least on element in $
-Z_{n}$$^{*}$ which does not belong to G(n).</p>
-<p>Suppose, n = p$^{k}$ q, where p and q are odd, p is prime, k ? 2, gcd
-(p, q) =1.</p>
-<p>\ \ \ \ Let, a= 1 + $p^{k-1}q.$</p>
-<p>\ \ \ \ We have, $(\frac{a}{n})= (\frac{a}{q})=1. $</p>
-<p>\ \ \ \ Using Binomial theorem,</p>
-<p>\ \ \ \ $a^{(n-1)/2}= \sum_{i=0}^{(n-1)/2}{(\frac{n-1}{2})C_{i}}
-(p^{k-1}q)^{i}$</p>
-<p>\ \ \ \ \ \ \ \ \ \ \ \ $\equiv 1+\frac{n-1}{2} p^{k-1}q (mod n) $</p>
-<p>\ \ \ \ $[$$?$ as for k? 2, the other terms in binomial expansion are
-0 (mod n) $]$</p>
-<p>\ \ \ \</p>
-<p>\ \ \ \ Let us assume, a $?G(n)$</p>
-<p>\ \ \ \ $ (\frac{a}{n}) \equiv a^{(n-1)/2 } (mod n)} $</p>
-<p>\ \ \ \ $?1=1+\frac{n-1}{2} p^{k-1}q (mod n)$</p>
-<p>\ \ \ \ $? \frac{n-1}{2} p^{k-1}q=0 (mod n)$</p>
-<p>\ \ \ \ $? p^{k}q \vert (\frac{n-1}{2} )p^{k-1}q ? p \vert
-\frac{n-1}{2} ?n \equiv 1 (mod p).$</p>
-<p>\ \ \ \ But this is \textbf{contradiction. }Because we know that $
-n\equiv 0 (mod p)$</p>
-<p>\ \ \ \ $a ?G(n)$</p>
-<p>\ \ \ \ $although a ?Z_{n}^{} , it does not belong to G(n)$</p>
-<p>\ \ \ \ Thus, $\vert G(n)\vert \le \frac{n-1}{2}$</p>
-<p>\ \ \ \ Suppose, n is composite.</p>
-<p>\ \ \ \ If gcd (a, n) ? 1 $? (\frac{a}{n}) \equiv 0$ ,</p>
-<p>\ \ \ \ Thus, algorithm gives always correct answer in this case.</p>
-<p>\ \ \ \ If, $a ? Z_{n}^{} , $thus gcd (a, n) ? 1, Solovay Strassen
-returns wrong answer if and only if a $?G(n)$.</p>
-<p>\ \ \ \ We proved that |G(n)| ? (n-1)/2.</p>
-<p>\ \ \ \ Thus, the probability of a wrong answer is:</p>
-<p>\ \ \ \ \ \ \ \ \ \ \ \ $\frac{|Z_{n}^{}|}{n-1}
-\frac{|G(n)|}{|Z_{n}^{}|} \le \frac{1}{2}$</p>
-<p>\end{document}</p>
 
 
               
@@ -291,8 +217,6 @@ returns wrong answer if and only if a $?G(n)$.</p>
     <li><a href="#what-is-steganography">What is Steganography?</a></li>
     <li><a href="#history">History</a></li>
     <li><a href="#what-is-the-advantage-of-steganography-over-cryptography">What is the advantage of steganography over cryptography?</a></li>
-    <li><a href="#as-an-image">as an image</a></li>
-    <li><a href="#as-an-equation-in-latexkatex">as an equation in latex/katex</a></li>
   </ul>
 </nav>
       </div>
